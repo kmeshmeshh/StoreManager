@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.2191419">
+  <PropertyGroup>
+    <StartupCommand>npm run dev</StartupCommand>
+    <JavaScriptTestRoot>src\</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Vitest</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="NewFolder\**" />
+    <None Remove="src\NewFolder\**" />
+    <None Remove="src\Services\**" />
+    <None Remove="src\shared\components\**" />
+    <TypeScriptConfiguration Remove="NewFolder\**" />
+    <TypeScriptConfiguration Remove="src\NewFolder\**" />
+    <TypeScriptConfiguration Remove="src\Services\**" />
+    <TypeScriptConfiguration Remove="src\shared\components\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="axiosClient.js" />
+    <None Remove="src\Pages\Customers\api\mutation.ts" />
+    <None Remove="src\Pages\Products\api\axiosClient.js" />
+    <None Remove="src\Pages\Sales\components\expand-product-list.tsx" />
+    <None Remove="src\shared\schemas\orderSchema.ts" />
+    <None Remove="src\shared\ui\button\ButtonProps.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Layouts\components\" />
+    <Folder Include="src\Pages\Customers\api\" />
+    <Folder Include="src\Pages\Orders\api\" />
+    <Folder Include="src\Pages\Returns\api\" />
+    <Folder Include="src\Pages\Sales\api\" />
+    <Folder Include="src\Routes\" />
+    <Folder Include="src\Pages\Products\api\" />
+  </ItemGroup>
+</Project>
