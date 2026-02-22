@@ -11,7 +11,7 @@ A full-stack Store Management System built with **ASP.NET Core Web API** and **R
 - 3-Layer Architecture (N-Tier) with Repository Pattern
 
 ### Frontend
-- React 18 + TypeScript
+- React + TypeScript
 - Vite
 - TanStack Query (React Query)
 - React Hook Form + Zod Validation
